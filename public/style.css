@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+header {
+    height: 75px;
+    background: #9E0B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,  #9E0B3F, #8e44ad);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9E0B3F, #8e44ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-weight: lighter;
+    font-size: 2.7em;
+    color: #fff;
+    padding: 25px 5px 5px 25px;
+    letter-spacing: 1.5;
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr;
+    align-content: center;
+    justify-content: center;
+   
+
+}
+input {
+
+}
+li {
+    background-color: rgb(235, 235, 235);
+    margin:15px;
+    padding:7px;
+    font-weight: bold;
+    border-radius: 1px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 5% 1fr 15%;
+    align-items: center;
+}
+
+#inputTodo {
+    margin:15px;
+  
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #9E0B3F;
+}
+
+.fa-reply {
+    
+}
+
+
+li i {
+    color: #04117B;
+    justify-self: end;
+    margin-right: 5px;
+    
+}
+
+reply {
+    align-self: start;
+}
+div section {
+    display: grid;
+    grid-template-columns: 90% 10%;
+
+}
+
+main div {
+    margin:auto;
+    width:100%;
+}
+form  {
+    margin:auto;
+    width:100%;
+}
+
+.reply {
+    justify-self: left;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* input[type="checkbox"], .checked {
+   display: none;
+} */
+
+.unchecked:checked {
+    
+}
+#wrapper {
+    width: 100%;
+}
+@media only screen and (min-width:600px) {
+
+header {
+    margin-bottom: 30px;
+}
+#wrapper {
+    
+    width: 40%;
+    border: 1px solid #9E0B3F;
+    margin: auto;
+    border-radius: 15px;
+    height: 75vh;
+} 
+
+#inputTodo {
+  
+    border-radius: 10px;
+}
+  }
