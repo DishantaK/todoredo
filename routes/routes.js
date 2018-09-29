@@ -12,41 +12,17 @@ module.exports = function(app) {
 
   });
   app.get('/api/notes', function(req, res) {
-    db.noteDir.find({})
-    .then(function (dbnoteDir) {
-        res.json(dbnoteDir);
-    })
-    .catch(function (err) {
-        res.json(err);
-    });
+    res.json(req.body);
   });
 
   app.post('/api/notes', function(req, res) {
-    db.noteDir.create({})
-    .then(function (dbnoteDir) {
-        res.json(dbnoteDir);
-    })
-    .catch(function (err) {
-        res.json(err);
-    })
+    res.send(req.body);
   });
   app.put('/api/notes', function(req, res) {
-    db.noteDir.findOneAndUpdate({})
-    .then(function (dbnoteDir) {
-        res.json(dbnoteDir);
-    })
-    .catch(function (err) {
-        res.json(err);
-    })
+    res.json(req.body);
+  
   });
   app.delete('/api/notes', function(req, res) {
-    db.noteDir.remove({})
-    .then(function (dbnoteDir) {
-        res.json(dbnoteDir);
-    })
-    .catch(function (err) {
-        res.json(err);
-    })
-    res.json(req.body);
+    res.send(req.body);
   });
 };
