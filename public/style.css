@@ -42,7 +42,7 @@ li {
 
 #inputTodo {
     margin:15px;
-  
+    width: 80%;
     padding: 3px;
     border-radius: 5px;
     border: 1px solid #9E0B3F;
