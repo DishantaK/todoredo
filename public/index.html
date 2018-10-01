@@ -22,9 +22,9 @@
     <main>
         <section id="wrapper">
             <div>
-                <section>
-                    <input type="text" placeholder="Add a Todo" id="inputTodo" /> <button class="reply" id="replySubmit"><i class="fas fa-reply fa-flip-horizontal"></i></button>
-                </section>
+                <form action="/api/notes" method="POST">
+                    <input type="text" placeholder="Add a Todo" id="inputTodo" /> <button class="reply" id="replySubmit" type="submit"><i class="fas fa-reply fa-flip-horizontal"></i></button>
+                </form>
             </div>
           
                 <ul>

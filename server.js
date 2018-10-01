@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Sets our server to use the public directory for static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect('mongodb://localhost/notes', { useNewUrlParser: true });
+mongoose.connect('mongodb://dishantak:Latrell21!@ds143717.mlab.com:43717/task', { useNewUrlParser: true });
 // Routes
 // -----------------
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var NoteSchema = new Schema({ 
+var noteSchema = new Schema({ 
     
     itemName: {
         type: String,
@@ -15,7 +15,7 @@ var NoteSchema = new Schema({
 
 
 
-var noteDir = mongoose.model("Note", NoteSchema);
+var noteDir = mongoose.model("noteDir", noteSchema);
 
-// Export the Inventory model
+// Export the Note model
 module.exports = noteDir;

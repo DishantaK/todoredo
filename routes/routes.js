@@ -1,5 +1,5 @@
 const path = require('path');
-const db = require('../models/notes');
+var noteDir = require('../models/notes');
 
 // ===============================================================================
 // ROUTING
@@ -12,17 +12,50 @@ module.exports = function(app) {
 
   });
   app.get('/api/notes', function(req, res) {
-    res.json(req.body);
+    noteDir.find({})
+    .then(function(dbnoteDir) {
+      res.json(dbnoteDir);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
   });
 
-  app.post('/api/notes', function(req, res) {
+  app.post('/api/notes', function(req, res) { 
+
+    noteDir.create(req.body)
+    .then(function(dbnoteDir) {
+     
+      res.json(dbnoteDir);
+    })
+    .catch(function(err) {
+    
+      res.json(err);
+    });
     res.send(req.body);
   });
   app.put('/api/notes', function(req, res) {
-    res.json(req.body);
+    noteDir.findOneAndUpdate(req.body)
+    .then(function(dbnoteDir) {
+     
+      res.json(dbnoteDir);
+    })
+    .catch(function(err) {
+    
+      res.json(err);
+    });
   
   });
   app.delete('/api/notes', function(req, res) {
+    noteDir.deleteOne(req.body)
+    .then(function(dbnoteDir) {
+     
+      res.json(dbnoteDir);
+    })
+    .catch(function(err) {
+    
+      res.json(err);
+    });
     res.send(req.body);
   });
 };
